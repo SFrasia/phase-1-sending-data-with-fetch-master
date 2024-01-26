@@ -15,13 +15,13 @@ function submitData(name, email) {
 
 return fetch("http://localhost:3000/users", configurationObject)
   .then((res) => res.json)
-  .then(function (object) {
-    document.write(object.id);
+  .then(function (obj) {
+    document.write(obj.id);
   })
-  .catch(function (error) {
+  .catch(function (err) {
     alert("Bad things! Ragnarők!");
-    document.write(error.message);
-    console.log(error.message);
+    document.write(err.message);
+    console.log(err.message);
   });
 
 submitData();
